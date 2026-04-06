@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head th:replace="_fragments :: head('详情页')">
+    <title>详情页</title>
+</head>
+<body>
+    <!--导航-->
+    <nav class="ui inverted attached segment md-padded-tb-mini md-shadow-mini" th:replace="_fragments :: menu(1)">
+    </nav>
+
+    <!--内容-->
+    <div class="md-pd-tb-massive">
+        <div class="ui container">
+            <!--头部-->
+            <div class="ui top attached segment">
+                <div class="ui horizontal list">
+                    <div class="item">
+                        <div class="content">
+                            <a href="#" class="header md-tt-thin">作者名</a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <i class="calendar alternate icon"></i>日期
+                    </div>
+                    <div class="item">
+                        <i class="eye icon"></i>浏览量
+                    </div>
+                </div>
+            </div>
+            <!--图片-->
+            <div class="ui attached segment">
+                <img src="../static/images/back.jpg" class="ui fluid image" th:src="@{/images/back.jpg}">
+            </div>
+            <!--内容-->
+            <div class="ui attached segment">
+                <div class="ui basic segment">
+                    <div class="ui teal label md-right-top">图标</div>
+                </div>
+                <h3 class="ui center aligned header">标题</h3>
+                <div id="content" class="typo typo-selection js-toc-content md-pd-lr md-pd-tb-massive">
+                    <!--下面这句尝试了代码高亮显示-->
+                    <pre><code class="language-css">p { color: red }</code></pre>
+                    <h1 id="section1">标题一号</h1>
+                    <h2 id="section2">标题二号</h2>
+                    <h3>标题三号</h3>
+                    <p>我也不知道这里应该写什么我先随便写点东西放在这里就当我复制了一篇文章过来吧哈哈哈哈哈</p>
+                </div>
+                <!--赞赏-->
+                <div class="ui center aligned segment">
+                    <button class="ui red basic button" id="PayButton">爆点金币支持我</button>
+                </div>
+
+                <div class="ui PayButtonShow flowing popup transition hidden">
+                    <div class="ui orange basic label">
+                        <div class="ui images" style="font-size: inherit !important;">
+                            <div class="image">
+                                <img src="../static/images/wechat.jpg" alt="" class="ui image" style="width: 120px;" th:src="@{/images/wechat.jpg}">
+                                <div>微信</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!--信息-->
+            <div class="ui message">
+                <div class="ui middle aligned grid">
+                    <div class="eleven wide column">
+                        <ui class="list">
+                            <li>其实这里应该放文章信息的</li>
+                            <li>但是我没有</li>
+                            <li>放几行假装我写了</li>
+                        </ui>
+                    </div>
+                    <div class="five wide column">
+                        <img src="../static/images/wechat.jpg" alt="" class="ui floated right image" style="width: 120px;">
+                    </div>
+                </div>
+            </div>
+            <!--评论-->
+            <div class="ui teal segment" id="comment-container">
+                <!--这下面是复制的semantic ui的评论例子-->
+<div class="ui comments">
+  <h3 class="ui dividing header" _msttexthash="6976060" _msthash="238">评论</h3>
+  <div class="comment">
+    <a class="avatar">
+      <img src="/images/avatar/small/matt.jpg">
+    </a>
+    <div class="content">
+      <a class="author" _msttexthash="6645132" _msthash="239">马特</a>
+      <div class="metadata">
+        <span class="date" _msttexthash="19531616" _msthash="240">今天下午5：42</span>
+      </div>
+      <div class="text" _msttexthash="30238013" _msthash="241">多么有艺术性！</div>
+      <div class="actions">
+        <a class="reply" _msttexthash="4394546" _msthash="242">回复</a>
+      </div>
+    </div>
+  </div>
+  <div class="comment">
+    <a class="avatar">
+      <img src="/images/avatar/small/elliot.jpg">
+    </a>
+    <div class="content">
+      <a class="author" _msttexthash="12675858" _msthash="243">傅艾略特</a>
+      <div class="metadata">
+        <span class="date" _msttexthash="21681855" _msthash="244">昨天凌晨12：30</span>
+      </div>
+      <div class="text">
+        <p _msttexthash="93363855" _msthash="245">这对我的研究非常有帮助。也谢谢！</p>
+      </div>
+      <div class="actions">
+        <a class="reply" _msttexthash="4394546" _msthash="246">回复</a>
+      </div>
+    </div>
+    <div class="comments">
+      <div class="comment">
+        <a class="avatar">
+          <img src="/images/avatar/small/jenny.jpg">
+        </a>
+        <div class="content">
+          <a class="author" _msttexthash="13535561" _msthash="247">珍妮·赫斯</a>
+          <div class="metadata">
+            <span class="date" _msttexthash="4529798" _msthash="248">刚才</span>
+          </div>
+          <div class="text" _msttexthash="39919633" _msthash="249">艾略特，你总是那么:)</div>
+          <div class="actions">
+            <a class="reply" _msttexthash="4394546" _msthash="250">回复</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="comment">
+    <a class="avatar">
+      <img src="/images/avatar/small/joe.jpg">
+    </a>
+    <div class="content">
+      <a class="author" _msttexthash="11226332" _msthash="251">乔·亨德森</a>
+      <div class="metadata">
+        <span class="date" _msttexthash="4843696" _msthash="252">5天前</span>
+      </div>
+      <div class="text" _msttexthash="57533242" _msthash="253">伙计，这太棒了。非常感谢</div>
+      <div class="actions">
+        <a class="reply" _msttexthash="4394546" _msthash="254">回复</a>
+      </div>
+    </div>
+  </div>
+</div>
+                <!--提交留言区域-->
+                <div class="ui form">
+                    <div class="field">
+                        <textarea name="content" placeholder="输入你的观点？"></textarea>
+                    </div>
+                    <div class="fields">
+                        <div class="field">
+                            <div class="ui icon input">
+                                <input type="text" name="nickname" placeholder="邮箱">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="ui icon input">
+                                <input type="text" name="nickname" placeholder="用户名">
+                            </div>
+                        </div>
+                        <div class="ui teal button">发布</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ui vertical icon buttons md-fixed md-right-bottom">
+            <button type="button" class="ui toc teal button">目录</button>
+            <a href="#comment-container" class="ui teal button">评论</a>
+            <button class="ui wechat teal button"><i class="weixin icon"></i></button>
+            <a id="toTop-button" class="ui teal button"><i class="chevron up icon"></i></a>
+            
+        </div>
+    </div>
+
+    <!--存放目录内容-->
+    <div class="ui toc-container flowing popup transition hidden" style="width: 300px;">
+        <ol class="js-toc">
+        </ol>
+    </div>
+
+    <!--存放弹出的微信-->
+    <div id="qrcode" class="ui wechat-image flowing popup transition hidden" style="width: 150px;" >
+        <!--img src="../static/images/wechat.jpg" alt=""  style="width: 130px;" th:src="@{/images/wechat.jpg}"-->
+    </div>
+    
+
+    <!--底部-->
+    <footer class="ui inverted vertical segment md-padded-tb-massive" th:replace="_fragments :: footer">
+    </footer>
+    <!--/*/<th:block th:replace="_fragments :: script">/*/-->
+    <!--/*/</th:block>/*/-->
+
+<!--底下这串我看不懂，做互动的-->
+    <script>
+        /*做一个适应手机端的导航栏收缩按键*/
+        $('.menu.toggle').click(function(){
+            $('.md-item').toggleClass('md-mobile-hide');
+        });
+        /*一个赞赏探出二维码*/
+        $('#PayButton').popup({
+            popup : $('.PayButtonShow.popup'),
+            on : 'click',
+            position: 'bottom center'
+        });
+        /*弹出微信*/
+        $('.wechat').popup({
+            popup : $('.wechat-image.popup'),
+            position: 'bottom center'
+        });
+
+        /*生成二维码*/
+        var qrcode = new QRCode("qrcode", {
+	        text: "https://www.luogu.com.cn/",
+	        width: 128,
+	        height: 128,
+	        colorDark : "#000000",
+	        colorLight : "#ffffff",
+	        correctLevel : QRCode.CorrectLevel.H
+        });
+
+        $('#toTop-button').click(function(){
+            $(window).scrollTo(0,500);
+        });
+
+
+        /*用于初始化tocbot*/
+        tocbot.init({
+  // Where to render the table of contents.
+  tocSelector: '.js-toc',
+  // Where to grab the headings to build the table of contents.
+  contentSelector: '.js-toc-content',
+  // Which headings to grab inside of the contentSelector element.
+  headingSelector: 'h1, h2, h3',
+  // For headings inside relative or absolute positioned containers within content.
+  hasInnerContainers: true,
+});
+        /*用于弹出目录*/
+        $('.toc.button').popup({
+            popup : $('.toc-container.popup'),
+            on : 'click',
+            position: 'left center'
+        });
+    </script>
+    
+
+    
+</body>
+</html>

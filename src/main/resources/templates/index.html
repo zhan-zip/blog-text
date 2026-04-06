@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head th:replace="_fragments :: head('首页')">
+    <title>首页</title>
+</head>
+<body>
+<!--导航-->
+    <nav class="ui inverted attached segment md-padded-tb-mini md-shadow-mini" th:replace="_fragments :: menu(1)">
+    </nav>
+
+    <!--内容-->
+    <div class="md-pd-tb-massive">
+        <div class="ui container">
+            <div class="ui grid">
+                <!--左边博客列表-->
+                <div class="twelve wide column">
+                    <!--头部-->
+                    <div class="ui attached segment">
+                        <div class="ui middle aligned two column grid">
+                            <div class="column">
+                                <h1 class="ui teal header">BLOG</h1>
+                            </div>
+                            <div class="right aligned column">
+                                目前共<h3 class="ui teal header md-inline-block">2</h3>篇博客
+                            </div>
+                        </div>
+                    </div>
+                    <!--内容-->
+                    <div class="ui attached segment">
+                        <div class="ui padded vertical segment md-pd-tb-massive">
+                            <div class="ui grid">
+                                <div class="twelve wide column">
+                                    <h3 class="ui header">我不知道写啥，反正这是一个标题</h3>
+                                    <p class="md-tt-spaced">这拼多多助力能不能少来骚扰我。不管认不认识的，俩眼一瞪就发上微信。砍一刀指定砍不了，但想要猪下水，我能施舍一点。想要就自个儿打高铁来取，别老逗我了。家豪都没你们恶劣，再发现我就联系套狗的，到时候可别学猫叫。这拼多多助力能不能少来骚扰我。不管认不认识的，俩眼一瞪就发上微信。砍一刀指定砍不了，但想要猪下水，我能施舍一点。想要就自个儿打高铁来取，别老逗我了。家豪都没你们恶劣，再发现我就联系套狗的，到时候可别学猫叫。</p>
+                                    <div class="ui grid">
+                                        <div class="twelve wide column">
+                                            <div class="ui horizontal list">
+                                                <div class="item">
+                                                    <img src="/images/back.jpg" class="ui rounded image" alt="" th:src="@{/images/back.jpg}" style="width: 500px">
+                                                    <div class="content">
+                                                        <a href="#" class="header md-tt-thin">作者名</a>
+                                                    </div>
+                                                </div>
+                                                <div class="item">
+                                                    <i class="calendar alternate icon"></i>日期
+                                                </div>
+                                                <div class="item">
+                                                    <i class="eye icon"></i>浏览量
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="right aligned four wide column">
+                                            <a href="#" target="_blank" class="ui label">这是个标签</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="four wide column">
+                                    <a href="#" target="_blank">
+                                        <img src="../static/images/wechat.jpg" alt="" class="ui rounded images" style="width: 150px;height: auto;">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="ui padded vertical segment md-pd-tb-massive">
+                            <div class="ui grid">
+                                <div class="twelve wide column">
+                                    <h3 class="ui header">我不知道写啥，反正这是一个标题</h3>
+                                    <p class="md-tt-spaced">这拼多多助力能不能少来骚扰我。不管认不认识的，俩眼一瞪就发上微信。砍一刀指定砍不了，但想要猪下水，我能施舍一点。想要就自个儿打高铁来取，别老逗我了。家豪都没你们恶劣，再发现我就联系套狗的，到时候可别学猫叫。</p>
+                                    <div class="ui grid">
+                                        <div class="twelve wide column">
+                                            <div class="ui horizontal list">
+                                                <div class="item">
+                                                    <img src="/images/wechat.jpg" class="ui rounded image" alt="" th:src="@{/images/wechat.jpg}">
+                                                    <div class="content">
+                                                        <a href="#" class="header md-tt-thin">作者名</a>
+                                                    </div>
+                                                </div>
+                                                <div class="item">
+                                                    <i class="calendar alternate icon"></i>日期
+                                                </div>
+                                                <div class="item">
+                                                    <i class="eye icon"></i>浏览量
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="right aligned four wide column">
+                                            <a href="#" target="_blank" class="ui label">这是个标签</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="four wide column">
+                                    <a href="#" target="_blank">
+                                        <img src="../static/images/wechat.jpg" alt="" class="ui rounded images" style="width: 150px;height: auto;">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--底部-->
+                    <div class="ui bottom attached segment">
+                        <div class="ui middle aligned two column grid">
+                            <div class="column">
+                                <a href="#" class="ui teal button">上一页</a>
+                            </div>
+                            <div class="right aligned column">
+                                <a href="#" class="ui teal button">下一页</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--右边博客TOP-->
+                <div class="four wide column">
+                    <!--分类-->
+                    <div class="ui attached segments">
+                        <div class="ui secondary segment">
+                            <div class="ui two column grid">
+                                <div class="column">
+                                    <i class="idea icon"></i>分类
+                                </div>
+                                <div class="right aligned column">
+                                    <a href="#">更多内容 >></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ui segment">
+                            <div class="ui fluid vertical menu">
+                                <a href="#" class="item">
+                                    其中之一
+                                    <div class="ui teal basic label">0</div>
+                                </a>
+                                <a href="#" class="item">
+                                    其中之一
+                                    <div class="ui teal basic label">0</div>
+                                </a>
+                                <a href="#" class="item">
+                                    其中之一
+                                    <div class="ui teal basic label">0</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--标签-->
+                    <div class="ui segments">
+                        <div class="ui secondary segment">
+                            <div class="ui two column grid">
+                                <div class="column">
+                                    <i class="tags icon"></i>标签
+                                </div>
+                                <div class="right aligned column">
+                                    <a href="#">更多内容 >></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ui segment">
+                            <a href="#" class="ui teal basic left label md-margin-tb-mini">
+                                标签之一
+                                <div class="ui teal basic label">0</div>
+                            </a>
+                            <a href="#" class="ui teal basic left label md-margin-tb-mini">
+                                标签之一
+                                <div class="ui teal basic label">0</div>
+                            </a>
+                            <a href="#" class="ui teal basic left label md-margin-tb-mini">
+                                标签之一
+                                <div class="ui teal basic label">0</div>
+                            </a>
+                        </div>
+                    </div>
+                    <!--最新推荐-->
+                    <div class="ui segments">
+                        <div class="ui secondary segment">
+                            <div class="ui two column grid">
+                                <div class="column">
+                                    <i class="bookmark icon"></i>推荐内容
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ui segment">
+                            <a href="#" target="_blank">内容One</a>
+                        </div>
+                        <div class="ui segment">
+                            <a href="#" target="_blank">内容One</a>
+                        </div>
+                        <div class="ui segment">
+                            <a href="#" target="_blank">内容One</a>
+                        </div>
+                    </div>
+                    <!--二维码-->
+                    <div class="ui horizontal divider header">加我好友！</div>
+                    <div class="ui center card">
+                        <img src="../static/images/wechat.jpg" th:src="@{/images/wechat.jpg}">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--底部-->
+    <footer class="ui inverted vertical segment md-padded-tb-massive" th:replace="_fragments :: footer">
+    </footer>
+    <!--/*/<th:block th:replace="_fragments :: script">/*/-->
+    <!--/*/</th:block>/*/-->
+
+<!--底下这串我看不懂，适应手机端的-->
+    <script>
+        $('.menu.toggle').click(function(){
+            $('.md-item').toggleClass('md-mobile-hide');
+        });
+    </script>
+</body>
+</html>
