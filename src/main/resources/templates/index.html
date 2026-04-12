@@ -126,17 +126,9 @@
                         </div>
                         <div class="ui segment">
                             <div class="ui fluid vertical menu">
-                                <a href="#" class="item">
-                                    其中之一
-                                    <div class="ui teal basic label">0</div>
-                                </a>
-                                <a href="#" class="item">
-                                    其中之一
-                                    <div class="ui teal basic label">0</div>
-                                </a>
-                                <a href="#" class="item">
-                                    其中之一
-                                    <div class="ui teal basic label">0</div>
+                                <a th:each="type : ${types}" th:href="@{/types/{id}(id=${type.id})}" class="item">
+                                    <span th:text="${type.name}">分类名称</span>
+                                    <div class="ui teal basic label" th:text="${type.blogs.size()}">0</div>
                                 </a>
                             </div>
                         </div>

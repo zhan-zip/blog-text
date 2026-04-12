@@ -1,20 +1,30 @@
-package com.lrm.web;
+package com.lrm.web.admin;
 
+import com.lrm.service.BlogService;
+import com.lrm.service.TypeService;
+import com.lrm.vo.BlogQuery;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller("com.lrm")
 public class IndexController {
 
+    @Autowired
+    private BlogService blogService;
+
+    @Autowired
+    private TypeService typeService;
+
     @GetMapping("/")
-    public String index() {
-//        int i = 9/0;
-//        String blog = null;
-//        if (blog == null) {
-//            throw new NotFoundException("博客不存在");
-//        }
-        System.out.println("--index---");
-        System.out.println("控制器执行了");
+    public String index(@PageableDefault(size = 3,sort = {"updateTime"}, direction = Sort.Direction.DESC) Pageable pageable, BlogQuery blog, Model model) {
+        model.addAttribute("page",blogService.listBlog(pageable));
+        model.addAttribute("types",typeService.listTypeTop(6)); //嗯显示几个分类
+        System.out.println("--index控制器执行了---");
         return "index";
     }
 
