@@ -16,14 +16,16 @@
                 <div class="ui horizontal list">
                     <div class="item">
                         <div class="content">
-                            <a href="#" class="header md-tt-thin">作者名</a>
+                            <a href="#" class="header md-tt-thin" th:text="${blog.user != null ? blog.user.nickname : '匿名'}">作者名</a>
                         </div>
                     </div>
                     <div class="item">
-                        <i class="calendar alternate icon"></i>日期
+                        <span th:text="${blog.updateTime != null ? #dates.format(blog.updateTime, 'yyyy-MM-dd HH:mm') : '未知'}">日期</span>
                     </div>
                     <div class="item">
-                        <i class="eye icon"></i>浏览量
+                        <div th:if="${blog.type != null}">
+                            分类：<span th:text="${blog.type.name}">未分类</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -36,14 +38,8 @@
                 <div class="ui basic segment">
                     <div class="ui teal label md-right-top">图标</div>
                 </div>
-                <h3 class="ui center aligned header">标题</h3>
-                <div id="content" class="typo typo-selection js-toc-content md-pd-lr md-pd-tb-massive">
-                    <!--下面这句尝试了代码高亮显示-->
-                    <pre><code class="language-css">p { color: red }</code></pre>
-                    <h1 id="section1">标题一号</h1>
-                    <h2 id="section2">标题二号</h2>
-                    <h3>标题三号</h3>
-                    <p>我也不知道这里应该写什么我先随便写点东西放在这里就当我复制了一篇文章过来吧哈哈哈哈哈</p>
+                <h3 class="ui center aligned header" th:text="${blog.title}">标题</h3>
+                <div id="content" class="typo typo-selection js-toc-content md-pd-lr md-pd-tb-massive" th:utext="${blog.content}">
                 </div>
                 <!--赞赏-->
                 <div class="ui center aligned segment">

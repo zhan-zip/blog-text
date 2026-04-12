@@ -169,14 +169,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="ui segment">
-                            <a href="#" target="_blank">内容One</a>
-                        </div>
-                        <div class="ui segment">
-                            <a href="#" target="_blank">内容One</a>
-                        </div>
-                        <div class="ui segment">
-                            <a href="#" target="_blank">内容One</a>
+                        <div th:each="blog : ${recommendBlogs}" class="ui segment">
+                            <a th:href="@{/blog/{id}(id=${blog.id})}" target="_blank" th:text="${blog.title}">内容One</a>
                         </div>
                     </div>
                     <!--二维码-->
