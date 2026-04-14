@@ -59,10 +59,10 @@
                     <div class="ui bottom attached segment">
                         <div class="ui middle aligned two column grid">
                             <div class="column">
-                                <a href="#" class="ui teal button">上一页</a>
+                                <a class="ui teal button" th:href="@{/(page=${page.number}-1)}">上一页</a>
                             </div>
                             <div class="right aligned column">
-                                <a href="#" class="ui teal button">下一页</a>
+                                <a class="ui teal button" th:href="@{/(page=${page.number}+1)}">下一页</a>
                             </div>
                         </div>
                     </div>
