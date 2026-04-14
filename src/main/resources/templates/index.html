@@ -28,73 +28,30 @@
                     <!--内容-->
                     <div class="ui attached segment">
                         <div class="ui padded vertical segment md-pd-tb-massive">
-                            <div class="ui grid">
+                            <div class="ui grid" th:each="blog : ${page.content}">
                                 <div class="twelve wide column">
-                                    <h3 class="ui header">我不知道写啥，反正这是一个标题</h3>
-                                    <p class="md-tt-spaced">这拼多多助力能不能少来骚扰我。不管认不认识的，俩眼一瞪就发上微信。砍一刀指定砍不了，但想要猪下水，我能施舍一点。想要就自个儿打高铁来取，别老逗我了。家豪都没你们恶劣，再发现我就联系套狗的，到时候可别学猫叫。这拼多多助力能不能少来骚扰我。不管认不认识的，俩眼一瞪就发上微信。砍一刀指定砍不了，但想要猪下水，我能施舍一点。想要就自个儿打高铁来取，别老逗我了。家豪都没你们恶劣，再发现我就联系套狗的，到时候可别学猫叫。</p>
+                                    <h3 class="ui header"><a th:href="@{/blog/{id}(id=${blog.id})}" th:text="${blog.title}">标题</a></h3>
+                                    <p class="md-tt-spaced" th:text="${#strings.abbreviate(blog.content, 100)}">摘要</p>
                                     <div class="ui grid">
                                         <div class="twelve wide column">
                                             <div class="ui horizontal list">
                                                 <div class="item">
+                                                    <a th:href="@{/blog/{id}(id=${blog.id})}" target="_blank">
                                                     <img src="/images/back.jpg" class="ui rounded image" alt="" th:src="@{/images/back.jpg}" style="width: 500px">
-                                                    <div class="content">
-                                                        <a href="#" class="header md-tt-thin">作者名</a>
-                                                    </div>
+                                                    </a>
                                                 </div>
                                                 <div class="item">
-                                                    <i class="calendar alternate icon"></i>日期
+                                                    <i class="calendar alternate icon"></i><span th:text="${#dates.format(blog.updateTime,'yyyy-MM-dd')}">日期</span>
                                                 </div>
-                                                <div class="item">
-                                                    <i class="eye icon"></i>浏览量
-                                                </div>
+
                                             </div>
                                         </div>
                                         <div class="right aligned four wide column">
-                                            <a href="#" target="_blank" class="ui label">这是个标签</a>
+                                            <a href="#" target="_blank" class="ui label" th:text="${blog.type.name}">分类</a>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="four wide column">
-                                    <a href="#" target="_blank">
-                                        <img src="../static/images/wechat.jpg" alt="" class="ui rounded images" style="width: 150px;height: auto;">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
 
-
-                        <div class="ui padded vertical segment md-pd-tb-massive">
-                            <div class="ui grid">
-                                <div class="twelve wide column">
-                                    <h3 class="ui header">我不知道写啥，反正这是一个标题</h3>
-                                    <p class="md-tt-spaced">这拼多多助力能不能少来骚扰我。不管认不认识的，俩眼一瞪就发上微信。砍一刀指定砍不了，但想要猪下水，我能施舍一点。想要就自个儿打高铁来取，别老逗我了。家豪都没你们恶劣，再发现我就联系套狗的，到时候可别学猫叫。</p>
-                                    <div class="ui grid">
-                                        <div class="twelve wide column">
-                                            <div class="ui horizontal list">
-                                                <div class="item">
-                                                    <img src="/images/wechat.jpg" class="ui rounded image" alt="" th:src="@{/images/wechat.jpg}">
-                                                    <div class="content">
-                                                        <a href="#" class="header md-tt-thin">作者名</a>
-                                                    </div>
-                                                </div>
-                                                <div class="item">
-                                                    <i class="calendar alternate icon"></i>日期
-                                                </div>
-                                                <div class="item">
-                                                    <i class="eye icon"></i>浏览量
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="right aligned four wide column">
-                                            <a href="#" target="_blank" class="ui label">这是个标签</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="four wide column">
-                                    <a href="#" target="_blank">
-                                        <img src="../static/images/wechat.jpg" alt="" class="ui rounded images" style="width: 150px;height: auto;">
-                                    </a>
-                                </div>
                             </div>
                         </div>
                     </div>

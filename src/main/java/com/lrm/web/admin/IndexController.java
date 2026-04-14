@@ -25,7 +25,7 @@ public class IndexController {
     private TypeService typeService;
 
     @GetMapping("/")
-    public String index(@PageableDefault(size = 3,sort = {"updateTime"}, direction = Sort.Direction.DESC) Pageable pageable, BlogQuery blog, Model model) {
+    public String index(@PageableDefault(size = 4,sort = {"updateTime"}, direction = Sort.Direction.DESC) Pageable pageable, BlogQuery blog, Model model) {
         model.addAttribute("page",blogService.listBlog(pageable));
         model.addAttribute("types",typeService.listTypeTop(6)); //嗯显示几个分类
 
